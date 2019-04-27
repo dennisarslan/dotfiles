@@ -1,0 +1,31 @@
+#export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/
+alias grep='grep --color'
+alias rm=trash
+alias vim='nvim'
+alias vi='nvim'
+alias myip='curl http://ifconfig.co'
+alias nucwake='wakeonlan F4:4D:30:6C:95:A6'
+alias growlmsg="echo $'\e]9;Growl Notification\007'"
+alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
+alias crontab="VIM_CRONTAB=true EDITOR=nvim crontab"
+alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+alias listen="netstat -ant | grep LISTEN"
+alias gw="netstat -rn  | grep default | head -1 | awk '{print $2}'"
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias eu4scr='cd "/Users/dennisarslan/Library/Application Support/Steam/userdata/78062839/760/remote/236850"'
+alias gce='git commit -am empty; git push'
+
+# Amazee
+alias am='cd /Users/dennisarslan/Dropbox/Amazee'
+
+# Docker
+alias dock-stop-all="docker ps -a -q | xargs docker stop"
+alias dock-kill-all="docker ps -a -q | xargs docker kill"
+alias dock-rm-all="docker ps -a -q | xargs docker rm"
+alias dock-rmi-all="docker images -q | xargs docker rmi"
+alias dock-prune-containers="docker containers prune"
+alias dock-prune-image="docker image prune"
+alias dock-prune-system="docker system prune"
+
+# Private SSH aliases
+source /Users/dennisarslan/Dropbox/Documenten/Git/private/ssh_aliases

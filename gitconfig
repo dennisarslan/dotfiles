@@ -1,0 +1,39 @@
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[user]
+	name = Dennis Arslan
+	email = dennis@arslan.co.uk
+  signingkey = 243CDA47
+[credential]
+	helper = osxkeychain
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[github]
+  user = dennisarslan
+#[core]
+#  pager = zsh -lc 'diff-highlight | strip_diff_leading_symbols | less -r' -
+  excludesfile = /Users/dennisarslan/Dropbox/Documenten/Git/dotfiles/settings/gitignore
+[color "diff-highlight"]
+  oldNormal = "red bold"
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
+[ghi]
+	token = !security find-internet-password -a dennisarslan -s github.com -l 'ghi token' -w
+[commit]
+  gpgsign = false
+  template = /Users/dennisarslan/Dropbox/Documenten/Git/dotfiles/settings/stCommitMsg
+[gpg]
+  program = /usr/local/bin/gpg1
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true

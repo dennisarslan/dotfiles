@@ -1,0 +1,7 @@
+if [ $TERM = "xterm-256color" ]; then
+  cat /Users/dennisarslan/.archey
+  (archey -p -c -o > /Users/dennisarslan/.archey &)
+fi
+# bash /Users/dennisarslan/Git/scripts/archey.sh -p &
+# (/Users/dennisarslan/Git/scripts/archey.sh -p -c > /Users/dennisarslan/.archey &)
+# /usr/local/bin/archey -p > ~/.archey.out

@@ -1,0 +1,12 @@
+#cloud-config
+
+hostname: rancheros01
+
+rancher:
+  network:
+    interfaces:
+      eth*:
+        dhcp: true
+      
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCz/NFX/5f+43jPM1rpUkUJ9d9v6uxGG3P1OqGs0E40FbHALk7OoT4pAiE/2ChDZ7uzcW8eS/eVqQl7iOZMWJHFK5mxBz9V4Eq1T4Q1QhnbPhMFr3YMks/rZmDUALHUzsDpPm4eKivBSZ2jIjOMkLLcfFimvM5NtDnYk9y7yvX2AvDh/q8q6fpUZNXN/kRCZmYdfaauNnIAQBmhZwlEgNXxc8s72qXdsAIffsjT3u9I5f7mZvR+lLhMMLTJhC8LH1hjRCVwZvyxP1CDXPTBDNqxj51fm7rbpOQHJ+m09IgsJe7T9XgDrq5J26Wk8VD0bULNZPYiv+j50hmbA61LIn+N dennisarslan@Denniss-MacBook.local
